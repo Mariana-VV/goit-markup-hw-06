@@ -47,7 +47,9 @@ ul {
 }
 
 /*  */
+/*  */
 /* Header */
+/*  */
 /*  */
 
 header {
@@ -69,6 +71,8 @@ header {
   justify-content: center;
   align-items: center;
   min-height: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 .logo-block {
@@ -105,11 +109,11 @@ header {
   margin: 0;
 }
 
-.auth-site-list .item:not(:last-child) {
+.auth-site-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.auth-site-list .link {
+.auth-site-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,9 +152,9 @@ header {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.auth-site-list .item:hover .link,
-.auth-site-list .item:hover .icon,
-.auth-site-list .item:hover .icon-env {
+.auth-site-item:hover .auth-site-link,
+.auth-site-item:hover .icon,
+.auth-site-item:hover {
   --color4: var(--accent-color);
   --color2: var(--accent-color);
   color: var(--accent-color);
@@ -184,13 +188,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.site-nav-list .item:not(:last-child) {
+.site-nav-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-nav-list .link {
+.site-nav-link {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -203,8 +209,8 @@ header {
   letter-spacing: 0.02em;
 }
 
-.site-nav-list .link:hover,
-.site-nav-list .link:focus {
+.site-nav-link:hover,
+.site-nav-link:focus {
   color: var(--accent-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
