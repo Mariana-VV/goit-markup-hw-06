@@ -397,9 +397,9 @@
         <!--  -->
         <div class="sent-block">
           <p>Подпишитесь на рассылку</p>
-          <form class="form" autocomplete="off">
-            <input type="text" name="email" placeholder="E-mail" class="form-input">
-            <button class="footer-btn"><span class="form-field-text">Подписаться</span><img src="svg/sentsvg.svg"
+          <form class="footer-form" autocomplete="off">
+            <input type="text" name="email" placeholder="E-mail" class="footer-form-input">
+            <button class="footer-btn"><span class="footer-form-field-text">Подписаться</span><img src="svg/sentsvg.svg"
                 alt=""></button>
           </form>
         </div>
@@ -410,42 +410,66 @@
       <!--  -->
       <!--  -->
     </div>
-    <!-- <div class="backdrop is-hidden">
-      <div class="modal">
-        <form action="" class="form">
-          <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
-          <div class="form-field">
-            <input class="form-input" type="text" name="name" id="name" placeholder="Имя" />
-            <svg class="icon">
-              <use href="./svg/symbol-defs.svg#icon-pic1"></use>
-            </svg>
-            <label class="form-label" for="name">Имя</label>
-          </div>
-          <div class="form-field">
-            <input class="form-input" type="tel" name="tel" id="tel" placeholder="Телефон" />
-            <svg class="icon">
-              <use href="./svg/symbol-defs.svg#icon-pic2"></use>
-            </svg>
-            <label class="form-label" for="tel">Телефон</label>
-          </div>
-          <div class="form-field">
-            <input class="form-input" type="email" name="email" id="email" placeholder="Почта" />
-            <svg class="icon">
-              <use href="./svg/symbol-defs.svg#icon-pic3"></use>
-            </svg>
-            <label class="form-label" for="email">Почта</label>
-          </div>
-          <div class="form-field">
-            <label class="form-label" for="comment"></label>
-            <textarea class="comment" name="comment" id="comment" cols="30" rows="10"></textarea>
-          </div>
-          <input type="checkbox" name="" value="" id="agree" />
-          <label for="agree">Соглашаюсь с рассылкой и принимаюa
-            <a href="#">Условия договор</a></label>
-          <button type="submit" class="btn">Отправить</button>
-        </form>
-      </div>
+
+    <div class="modal is-hidden">
+      <form class="form" autocomplete="off">
+
+        <!--  -->
+        <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <!--  -->
+        <div class="form-field">
+          <input class="form-input" type="text" name="name" id="name" placeholder="  " />
+          <label class="form-label" for="name">Имя
+
+          </label>
+          <svg class="form-icon">
+            <use href="../svg/symbol-defs.svg#icon-form1"></use>
+          </svg>
+
+        </div>
+        <!--  -->
+        <div class="form-field">
+          <svg>
+            <use href="./svg/symbol-defs.svg#icon-scat"></use>
+          </svg>
+          <input class="form-input" type="tel" name="tel" id="tel" placeholder="  " />
+          <label class="form-label" for="tel">Телефон
+          </label>
+          <svg class="form-icon">
+            <use href="../svg/symbol-defs.svg#icon-form2"></use>
+          </svg>
+
+
+
+
+        </div>
+        <!--  -->
+        <div class="form-field">
+          <input class="form-input" type="email" name="email" id="email" placeholder="  " />
+          <label class="form-label" for="email">Почта
+          </label>
+          <svg class="form-icon">
+            <use href="../svg/symbol-defs.svg#icon-form3"></use>
+          </svg>
+
+        </div>
+        <!--  -->
+        <div class="form-field">
+
+          <textarea class="comment" name="comment" id="comment"></textarea>
+          <label class="form-label" for="comment">Kомментарий</label>
+        </div>
+        <!--  -->
+        <input type="checkbox" name="" value="" id="agree" />
+        <label for="agree" class="form-agree">Соглашаюсь с рассылкой и принимаюa
+          <a href="#">Условия договор</a></label>
+        <button type="submit" class="form-btn">Отправить</button>
+      </form>
     </div>
+
+    <!--  -->
+    <!--  -->
+    <!--  -->
     <script>
       (() => {
         document
@@ -460,8 +484,26 @@
             );
           });
       })();
-    </script> -->
+    </script>
+
   </footer>
+  <script src="./js/modal.js">
+    (() => {
+      const refs = {
+        openModalBtn: document.querySelector('[data-modal-open]'),
+        closeModalBtn: document.querySelector('[data-modal-close]'),
+        modal: document.querySelector('[data-modal]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      function toggleModal() {
+        refs.modal.classList.toggle('is-hidden');
+      }
+    })();
+  </script>
+
 </body>
 
 </html>

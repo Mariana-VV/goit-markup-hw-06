@@ -18,6 +18,7 @@ ul {
   --accent-color: #2196f3;
   --primary-bg-color: #e5e5e5;
   --color-aditional: #ffffff;
+  --color-form: #188ce8;
 }
 
 body {
@@ -65,7 +66,6 @@ header {
 
 .logo-block {
   margin-right: 85px;
-
 }
 
 .logo {
@@ -137,7 +137,8 @@ header {
 /*  auth-site*/
 /*  */
 
-.auth-site-block {}
+.auth-site-block {
+}
 
 .auth-site-list {
   display: flex;
@@ -200,9 +201,11 @@ header {
 /*  */
 
 .hero {
-  background-image: linear-gradient(to right,
+  background-image: linear-gradient(
+      to right,
       rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)),
+      rgba(47, 48, 58, 0.8)
+    ),
     url(../image/hiropic.jpg);
 
   height: 600px;
@@ -791,9 +794,7 @@ footer {
 .sent-cont {
   display: inline-block;
   width: 250px;
-
   vertical-align: bottom;
-
 }
 
 .develop {
@@ -808,11 +809,13 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.form {
+.footer-form {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-input {
+.footer-form-input {
   min-width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -822,7 +825,7 @@ footer {
 }
 
 .footer-btn {
-  background: #2196F3;
+  background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 700;
@@ -833,12 +836,11 @@ footer {
   justify-content: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 10px 28px 10px 29px;
-
 }
 
-.form-input:placeholder {
+.footer-form-input:placeholder {
   font-size: 16px;
   line-height: 20px;
   display: flex;
@@ -847,6 +849,148 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.form-field-text {
+.footer-form-field-text {
   margin-right: 10px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  transform: translate(-50% -50%);
+
+  min-width: 528;
+  min-height: 581px;
+  background-color: #fff;
+  margin: 0;
+}
+
+/* .backdrop .is-hidden {
+  opacity: 0;
+  pointer-events: none;
+} */
+
+.form {
+  margin-right: auto;
+  margin-left: auto;
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 11px 0 11px 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  border-radius: 4px;
+}
+
+.form-label {
+  position: absolute;
+  left: 45px;
+  top: 14px;
+  transform: translate(-50% -50%);
+  -webkit-transform: translate(-50% -50%);
+  -moz-transform: translate(-50% -50%);
+  -ms-transform: translate(-50% -50%);
+  -o-transform: translate(-50% -50%);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+
+.form-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.form-input:focus ~ .form-icon,
+.form-input:focus ~ .form-label {
+  fill: var(--color-form);
+  color: var(--color-form);
+}
+
+.form-input:focus {
+  border: solid var(--color-form);
+}
+
+.comment {
+  width: 100%;
+  min-height: 120px;
+}
+
+.form-agree {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.form-input:focus + .form-label {
+  transform: translateY(-35px);
+  transform: translateX(-35px);
+
+  -moz-transform: translateX(-35px);
+  -ms-transform: translateX(-35px);
+  -o-transform: translateX(-35px);
+  -webkit-transform: translateX(-35px);
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-35px);
+  -webkit-transform: translateY(-35px);
+  -moz-transform: translateY(-35px);
+  -ms-transform: translateY(-35px);
+  -o-transform: translateY(-35px);
+}
+
+.form-input:focus ~ .input-icon {
+}
+
+.form-btn {
+  display: block;
+  min-width: 200px;
+  min-height: 50px;
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  padding: 10px 55px;
+  margin: 30px auto 40px auto;
 }
