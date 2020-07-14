@@ -880,11 +880,24 @@ footer {
 } */
 
 .form {
+  position: relative;
   margin-right: auto;
   margin-left: auto;
   width: 528px;
   height: 581px;
   padding: 40px;
+}
+
+.form-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+.form-close:hover {
+  color: var(--color-form);
 }
 
 .form-title {
