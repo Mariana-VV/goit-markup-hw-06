@@ -880,7 +880,6 @@ footer {
 } */
 
 .form {
-  position: relative;
   margin-right: auto;
   margin-left: auto;
   width: 528px;
@@ -940,6 +939,9 @@ footer {
   color: #757575;
 }
 
+svg {
+  overflow: visible;
+}
 .form-icon {
   position: absolute;
   top: 12px;
