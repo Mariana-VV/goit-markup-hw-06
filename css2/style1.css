@@ -548,6 +548,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin-right: 10px;
+  background: #2F303A;
 }
 
 .form-input:placeholder {

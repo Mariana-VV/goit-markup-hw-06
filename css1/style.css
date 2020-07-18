@@ -137,8 +137,7 @@ header {
 /*  auth-site*/
 /*  */
 
-.auth-site-block {
-}
+.auth-site-block {}
 
 .auth-site-list {
   display: flex;
@@ -201,11 +200,9 @@ header {
 /*  */
 
 .hero {
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
-    ),
+      rgba(47, 48, 58, 0.8)),
     url(../image/hiropic.jpg);
 
   height: 600px;
@@ -822,6 +819,8 @@ footer {
   border-radius: 4px;
   padding: 15px 0 15px 16px;
   margin-right: 12px;
+  background-color: #2F303A;
+  ;
 }
 
 .footer-btn {
@@ -853,6 +852,9 @@ footer {
   margin-right: 10px;
 }
 
+/*  */
+/*  */
+/*  */
 .backdrop {
   position: fixed;
   top: 0;
@@ -864,20 +866,20 @@ footer {
 
 .modal {
   position: absolute;
-  top: 15%;
+  top: 5%;
   left: 25%;
   transform: translate(-50% -50%);
 
-  min-width: 528;
+  min-width: 528px;
   min-height: 581px;
   background-color: #fff;
   margin: 0;
 }
 
-/* .backdrop .is-hidden {
+.modal .is-hidden {
   opacity: 0;
   pointer-events: none;
-} */
+}
 
 .form {
   margin-right: auto;
@@ -895,8 +897,8 @@ footer {
   height: 30px;
 }
 
-.form-close:hover {
-  color: var(--color-form);
+.form-close-link:hover {
+  --color2: var(--color-form);
 }
 
 .form-title {
@@ -916,11 +918,14 @@ footer {
 }
 
 .form-input {
+
+  outline: none;
+  -webkit-appearance: none;
   width: 100%;
   padding: 11px 0 11px 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-
+  /* border: 1px solid rgba(33, 33, 33, 0.2); */
   border-radius: 4px;
+  background: none;
 }
 
 .form-label {
@@ -939,9 +944,6 @@ footer {
   color: #757575;
 }
 
-svg {
-  overflow: visible;
-}
 .form-icon {
   position: absolute;
   top: 12px;
@@ -950,19 +952,24 @@ svg {
   height: 18px;
 }
 
-.form-input:focus ~ .form-icon,
-.form-input:focus ~ .form-label {
+.form-input:focus~.form-icon,
+.form-input:focus~.form-label {
   fill: var(--color-form);
   color: var(--color-form);
 }
 
 .form-input:focus {
-  border: solid var(--color-form);
+  border: 2px solid var(--color-form);
 }
 
 .comment {
   width: 100%;
   min-height: 120px;
+  outline: none;
+}
+
+.comment:focus {
+  border: 2px solid var(--accent-color);
 }
 
 .form-agree {
@@ -972,7 +979,11 @@ svg {
   color: #757575;
 }
 
-.form-input:focus + .form-label {
+#agree {
+  -webkit-appearance: none;
+}
+
+.form-input:focus+.form-label {
   transform: translateY(-35px);
   transform: translateX(-35px);
 
@@ -982,8 +993,8 @@ svg {
   -webkit-transform: translateX(-35px);
 }
 
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
+.form-input:focus+.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
   transform: translateY(-35px);
   -webkit-transform: translateY(-35px);
   -moz-transform: translateY(-35px);
@@ -991,8 +1002,7 @@ svg {
   -o-transform: translateY(-35px);
 }
 
-.form-input:focus ~ .input-icon {
-}
+.form-input:focus~.input-icon {}
 
 .form-btn {
   display: block;
@@ -1008,4 +1018,23 @@ svg {
   letter-spacing: 0.06em;
   padding: 10px 55px;
   margin: 30px auto 40px auto;
+}
+
+/* .checkbox {
+  -web-kit-apearence: none;
+} */
+
+.check {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid;
+}
+
+.checkbox:checked+.check {
+  background-color: var(--accent-color);
+  background-image: url(../svg/icon-check.svg);
+  background-origin: border-box;
+  background-size: contain;
+
 }
